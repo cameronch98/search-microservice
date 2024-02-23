@@ -7,6 +7,9 @@ To install the necessary dependecies, run ```npm install``` in the project direc
 ## Setting up Database and Port
 Before utilizing the endpoints, create a .env file and enter the port for the service to run on as PORT and the MongoDB connect string as MONGO_URI. The database should be called search-terms-db, with a collection named search-terms.
 
+## Starting the Service
+To start up the server/application, run ```npm start``` in the project directory.
+
 ## Making Requests and Receiving Data
 There are 4 different endpoints to use in this application, /add-search-term, /all-search-terms, /matching-search-terms, and /random-search-term. The service is not deployed, so the calls are meant to be made via localhost at the port you chose in your env file. In the main application, you may utilize another name for the port in a different env file, or simply hard code the port you chose. In this case, we will just represent the port as PORT in a template literal.
 
