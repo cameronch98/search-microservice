@@ -1,0 +1,71 @@
+### Request 1: Add a single word search term
+POST http://localhost:3000/add-search-term HTTP/1.1
+Content-Type: application/json
+
+{
+    "search": "dogs"
+}
+
+### Request 2: Add a single word search term
+POST http://localhost:3000/add-search-term HTTP/1.1
+Content-Type: application/json
+
+{
+    "search": "school"
+}
+
+### Request 3: Add a single word search term
+POST http://localhost:3000/add-search-term HTTP/1.1
+Content-Type: application/json
+
+{
+    "search": "birthday"
+}
+
+### Request 4: Add a single word search term
+POST http://localhost:3000/add-search-term HTTP/1.1
+Content-Type: application/json
+
+{
+    "search": "car"
+}
+
+### Request 5: Add a multi word search term
+POST http://localhost:3000/add-search-term HTTP/1.1
+Content-Type: application/json
+
+{
+    "search": "graduation ceremony"
+}
+
+### Request 6: Add a multi word search term
+POST http://localhost:3000/add-search-term HTTP/1.1
+Content-Type: application/json
+
+{
+    "search": "lake day"
+}
+
+### Request 7: Add a multi word search term
+POST http://localhost:3000/add-search-term HTTP/1.1
+Content-Type: application/json
+
+{
+    "search": "school documents"
+}
+
+### Request 8: Get all search terms
+GET http://localhost:3000/all-search-terms HTTP/1.1
+Content-Type: application/json
+
+### Request 9: Get matching search terms
+GET http://localhost:3000/matching-search-terms HTTP/1.1
+Content-Type: application/json
+
+{
+    "search": "scho"
+}
+
+### Request 10: Get random search term
+GET http://localhost:3000/random-search-term HTTP/1.1
+Content-Type: application/json
