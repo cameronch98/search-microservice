@@ -1,6 +1,9 @@
 # Search Microservice
 Store and retrieve a shared collection of search terms the users of your application have entered. For use in future auto-completion, search analysis, etc.
 
+## Setting up Packages
+To install the necessary dependecies, run ```npm install``` in the project directory!
+
 ## Setting up Database and Port
 Before utilizing the endpoints, create a .env file and enter the port for the service to run on as PORT and the MongoDB connect string as MONGO_URI. The database should be called search-terms-db, with a collection named search-terms.
 
