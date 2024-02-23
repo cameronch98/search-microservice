@@ -17,7 +17,7 @@ There are 4 different endpoints to use in this application, /add-search-term, /a
 The endpoint /add-search-term can be used to add a new search term to the database. We can use fetch or axios to make the post request, and place the search term as "search" in the request body. The response includes JSON with an acknowledgement of the addition of the search term and the id of the added search term in the database. These code snippets should be used in an async function.
 
 #### Fetch
-```
+```javascript
 // Make the request to the endpoint
 const response = await fetch(`http://localhost:${PORT}/add-search-term`, {
   method: "POST",
@@ -32,7 +32,7 @@ const response = await response.json();
 ```
 
 #### Axios
-```
+```javascript
 // Make the request to the endpoint
 const response = await axios.post(
   `http://localhost:${PORT}/add-search-term`,
@@ -48,7 +48,7 @@ const response = await axios.post(
 ```
 
 #### Response Format
-```
+```json
 {
   "acknowledged": true,
   "insertedId": "65d902134bd5df79ec51aed9"
@@ -59,7 +59,7 @@ const response = await axios.post(
 The endpoint /all-search-terms can be used to retrieve all search terms from the database. We can use fetch or axios to make the get request. The response includes JSON with key "searchTerms" that has a value of the array of search terms. These code snippets should be used in an async function.
 
 #### Fetch
-```
+```javascript
 // Make the request to the endpoint
 const response = await fetch(`http://localhost:${PORT}/all-search-terms`);
 
@@ -68,7 +68,7 @@ const response = await response.json();
 ```
 
 #### Axios
-```
+```javascript
 // Make the request to the endpoint
 const response = await axios.get(`http://localhost:${PORT}/all-search-terms`);
 
@@ -76,7 +76,7 @@ const response = await axios.get(`http://localhost:${PORT}/all-search-terms`);
 ```
 
 #### Response Format
-```
+```json
 {
   "searchTerms": [
     "dogs",
@@ -95,7 +95,7 @@ const response = await axios.get(`http://localhost:${PORT}/all-search-terms`);
 The endpoint /matching-search-terms can be used to retrieve all search terms in the database beginning with the string sent in the request. This may represent a portion of a typed word as a user interacts with a search bar in an application. We can use fetch or axios to make the get request, and place the string as "search" in the request body. The response includes JSON with key "searchTerms" that has a value of the array of search terms. These code snippets should be used in an async function.
 
 #### Fetch
-```
+```javascript
 // Make the request to the endpoint
 const response = await fetch(`http://localhost:${PORT}/matching-search-terms`, {
   method: "GET",
@@ -110,7 +110,7 @@ const response = await response.json();
 ```
 
 #### Axios
-```
+```javascript
 // Make the request to the endpoint
 const response = await axios.get(
   `http://localhost:${PORT}/add-search-term`,
@@ -126,7 +126,7 @@ const response = await axios.get(
 ```
 
 #### Response Format
-```
+```json
 {
   "searchTerms": [
     "school",
@@ -139,7 +139,7 @@ const response = await axios.get(
 The endpoint /random-search-term can be used to retrieve a random search term from the database. This can be used for "feeling lucky" utilities in an application that utilizes a search functionality. We can use fetch or axios to make the get request. The response includes JSON with key "randomTerm" that has a value of the random search term as a string. These code snippets should be used in an async function.
 
 #### Fetch
-```
+```javascript
 // Make the request to the endpoint
 const response = await fetch(`http://localhost:${PORT}/random-search-term`);
 
@@ -148,7 +148,7 @@ const response = await response.json();
 ```
 
 #### Axios
-```
+```javascript
 // Make the request to the endpoint
 const response = await axios.get(`http://localhost:${PORT}/random-search-term`);
 
@@ -156,7 +156,7 @@ const response = await axios.get(`http://localhost:${PORT}/random-search-term`);
 ```
 
 #### Response Format
-```
+```json
 {
   "randomTerm": "birthday"
 }
