@@ -32,6 +32,7 @@ app.get("/all-search-terms", async (req, res) => {
   for await (const doc of cursor) {
     resultsArr.push(doc.searchTerm);
   }
+  console.log("All search terms have been retrieved from the database.");
   res.status(200).json({ searchTerms: resultsArr });
 });
 
@@ -45,6 +46,9 @@ app.get("/matching-search-terms", async (req, res) => {
   for await (const doc of cursor) {
     resultsArr.push(doc.searchTerm);
   }
+  console.log(
+    `All search terms beginning with ${req.body.search} have been retrieved from the database.`
+  );
   res.status(200).json({ searchTerms: resultsArr });
 });
 
@@ -55,6 +59,9 @@ app.get("/random-search-term", async (req, res) => {
   for await (const doc of cursor) {
     result = doc.searchTerm;
   }
+  console.log(
+    `A random search term, ${result}, has been retrieved from the database.`
+  );
   res.status(200).json({ randomTerm: result });
 });
 
