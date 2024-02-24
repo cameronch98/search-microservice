@@ -5,7 +5,7 @@ import db from "./db.mjs";
 // Define port number
 const PORT = process.env.PORT;
 
-// Initialize express app and mongo client
+// Initialize express app
 const app = express();
 
 // Initializing parsing middlewares
