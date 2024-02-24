@@ -59,7 +59,7 @@ const data = response.data;
 
 #### UML Sequence Diagram
 
-![UML sequence diagram for adding a search term](./readme-images/add-search-term-UML.jpeg)
+![UML sequence diagram for adding a search term](./images/add-search-term-UML.jpeg)
 
 ### Get All Search Terms
 
@@ -104,7 +104,7 @@ const data = response.data;
 
 #### UML Sequence Diagram
 
-![UML sequence diagram for getting all search terms](./readme-images/all-search-terms-UML.jpeg)
+![UML sequence diagram for getting all search terms](./images/all-search-terms-UML.jpeg)
 
 ### Get Matching Search Terms
 
@@ -144,7 +144,7 @@ const data = response.data;
 
 #### UML Sequence Diagram
 
-![UML sequence diagram for getting matching search terms](./readme-images/matching-search-terms-UML.jpeg)
+![UML sequence diagram for getting matching search terms](./images/matching-search-terms-UML.jpeg)
 
 ### Get a Random Search Term
 
@@ -182,4 +182,4 @@ const data = response.data;
 
 #### UML Sequence Diagram
 
-![UML sequence diagram for getting a random search term](./readme-images/random-search-term-UML.jpeg)
+![UML sequence diagram for getting a random search term](./images/random-search-term-UML.jpeg)
