@@ -1,5 +1,5 @@
 ### Request 1: Add a single word search term
-POST http://localhost:3000/add-search-term HTTP/1.1
+POST http://localhost:3000/search-terms/add HTTP/1.1
 Content-Type: application/json
 
 {
@@ -7,7 +7,7 @@ Content-Type: application/json
 }
 
 ### Request 2: Add a single word search term
-POST http://localhost:3000/add-search-term HTTP/1.1
+POST http://localhost:3000/search-terms/add HTTP/1.1
 Content-Type: application/json
 
 {
@@ -15,7 +15,7 @@ Content-Type: application/json
 }
 
 ### Request 3: Add a single word search term
-POST http://localhost:3000/add-search-term HTTP/1.1
+POST http://localhost:3000/search-terms/add HTTP/1.1
 Content-Type: application/json
 
 {
@@ -23,7 +23,7 @@ Content-Type: application/json
 }
 
 ### Request 4: Add a single word search term
-POST http://localhost:3000/add-search-term HTTP/1.1
+POST http://localhost:3000/search-terms/add HTTP/1.1
 Content-Type: application/json
 
 {
@@ -31,7 +31,7 @@ Content-Type: application/json
 }
 
 ### Request 5: Add a multi word search term
-POST http://localhost:3000/add-search-term HTTP/1.1
+POST http://localhost:3000/search-terms/add HTTP/1.1
 Content-Type: application/json
 
 {
@@ -39,7 +39,7 @@ Content-Type: application/json
 }
 
 ### Request 6: Add a multi word search term
-POST http://localhost:3000/add-search-term HTTP/1.1
+POST http://localhost:3000/search-terms/add HTTP/1.1
 Content-Type: application/json
 
 {
@@ -47,7 +47,7 @@ Content-Type: application/json
 }
 
 ### Request 7: Add a multi word search term
-POST http://localhost:3000/add-search-term HTTP/1.1
+POST http://localhost:3000/search-terms/add HTTP/1.1
 Content-Type: application/json
 
 {
@@ -55,17 +55,13 @@ Content-Type: application/json
 }
 
 ### Request 8: Get all search terms
-GET http://localhost:3000/all-search-terms HTTP/1.1
+GET http://localhost:3000/search-terms/all HTTP/1.1
 Content-Type: application/json
 
 ### Request 9: Get matching search terms
-GET http://localhost:3000/matching-search-terms HTTP/1.1
+GET http://localhost:3000/search-terms/match/scho HTTP/1.1
 Content-Type: application/json
 
-{
-    "search": "scho"
-}
-
 ### Request 10: Get random search term
-GET http://localhost:3000/random-search-term HTTP/1.1
+GET http://localhost:3000/search-terms/random HTTP/1.1
 Content-Type: application/json

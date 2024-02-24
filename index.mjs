@@ -16,7 +16,7 @@ app.use(express.json());
 const searchTerms = db.collection("search-terms");
 
 // Add a search term
-app.post("/add-search-term", async (req, res) => {
+app.post("/search-terms/add", async (req, res) => {
   const search = { searchTerm: `${req.body.search}` };
   const result = await searchTerms.insertOne(search);
   console.log(
@@ -26,7 +26,7 @@ app.post("/add-search-term", async (req, res) => {
 });
 
 // Get all search terms
-app.get("/all-search-terms", async (req, res) => {
+app.get("/search-terms/all", async (req, res) => {
   const cursor = searchTerms.find();
   let resultsArr = [];
   for await (const doc of cursor) {
@@ -37,8 +37,8 @@ app.get("/all-search-terms", async (req, res) => {
 });
 
 // Get all matching search terms
-app.get("/matching-search-terms", async (req, res) => {
-  const query = new RegExp(`^${req.body.search}`);
+app.get("/search-terms/match/:search", async (req, res) => {
+  const query = new RegExp(`^${req.params.search}`);
   const cursor = searchTerms.find({
     searchTerm: { $regex: query },
   });
@@ -47,13 +47,13 @@ app.get("/matching-search-terms", async (req, res) => {
     resultsArr.push(doc.searchTerm);
   }
   console.log(
-    `All search terms beginning with ${req.body.search} have been retrieved from the database.`
+    `All search terms beginning with ${req.params.search} have been retrieved from the database.`
   );
   res.status(200).json({ searchTerms: resultsArr });
 });
 
 // Get random search term
-app.get("/random-search-term", async (req, res) => {
+app.get("/search-terms/random", async (req, res) => {
   const cursor = searchTerms.aggregate([{ $sample: { size: 1 } }]);
   let result = "";
   for await (const doc of cursor) {
