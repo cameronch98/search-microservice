@@ -1,5 +1,6 @@
 import "dotenv/config";
 import express from "express";
+import cors from "cors";
 import db from "./db.mjs";
 
 // Define port number
@@ -7,6 +8,7 @@ const PORT = process.env.PORT;
 
 // Initialize express app
 const app = express();
+app.use(cors({ origin: "*" }));
 
 // Initializing parsing middlewares
 app.use(express.urlencoded({ extended: true }));

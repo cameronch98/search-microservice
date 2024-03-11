@@ -27,7 +27,7 @@ const response = await fetch(`http://localhost:${PORT}/search-terms/add`, {
 });
 
 // Parse the JSON to receive the data
-const response = await response.json();
+const data = await response.json();
 ```
 
 #### Axios
@@ -72,7 +72,7 @@ The endpoint /search-terms/all can be used to retrieve all search terms from the
 const response = await fetch(`http://localhost:${PORT}/search-terms/all`);
 
 // Parse the JSON to receive the data
-const response = await response.json();
+const data = await response.json();
 ```
 
 #### Axios
@@ -119,7 +119,7 @@ const response = await fetch(
 );
 
 // Parse the JSON to receive the data
-const response = await response.json();
+const data = await response.json();
 ```
 
 #### Axios
@@ -157,7 +157,7 @@ The endpoint /search-terms/random can be used to retrieve a random search term f
 const response = await fetch(`http://localhost:${PORT}/search-terms/random`);
 
 // Parse the JSON to receive the data
-const response = await response.json();
+const data = await response.json();
 ```
 
 #### Axios
